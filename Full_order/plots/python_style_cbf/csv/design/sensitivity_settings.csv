@@ -1,0 +1,13 @@
+quantity,value
+sensitivity_source,emt_offline
+delta_z_system_pu,0.01
+delta_z_MW_on_100MVA_base,1.0
+probe_event_time_s,0.05
+window_start_after_event_s,0.02
+window_end_after_event_s,0.05
+simulation_end_s,0.12
+export_dt_s,0.0005
+relative_asymmetry,0.06342663588156917
+lambda_min_symmetric,0.03851060285902773
+lambda_max_symmetric,0.13669835014302714
+weighted_lambda_max,0.7999999999999995

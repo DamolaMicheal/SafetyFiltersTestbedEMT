@@ -1,0 +1,23 @@
+EMT epsilon heatmap rectangular-grid fix
+
+The previous Python plotter required every epsilon case to contain exactly
+the same CSV time stamps. Adaptive DAE output / endpoint roundoff can leave a
+few missing values even when the Julia sweep targets one common grid.
+
+Use:
+    python plot_emt_epsilon_heatmap.py
+
+The fixed plotter now:
+  1. reads the existing emt_epsilon_time_violation_map.csv,
+  2. groups each epsilon case independently,
+  3. removes non-finite/duplicate samples,
+  4. interpolates in TIME only onto 0:0.01:1.5 s,
+  5. does not interpolate across epsilon,
+  6. rejects a case if its time coverage is genuinely incomplete.
+
+Therefore you can first try the new Python plotter WITHOUT rerunning the
+20 EMT simulations.
+
+The Julia logger is also hardened for future runs: it removes non-finite raw
+samples, clamps only tiny endpoint discrepancies, verifies each epsilon has
+the same number of output rows, and refuses to write a malformed heatmap CSV.

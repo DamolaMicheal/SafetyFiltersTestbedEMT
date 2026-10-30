@@ -1,0 +1,9 @@
+quantity,value
+filter_enabled,0.0
+frequency_lower_hz,-0.07
+frequency_upper_hz,0.07
+alpha_lower,5.0
+alpha_upper,5.0
+filter_epsilon_s,0.018
+rocof_tau_s,0.001
+prox_step_fraction,0.55

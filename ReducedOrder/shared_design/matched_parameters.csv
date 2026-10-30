@@ -1,0 +1,15 @@
+quantity,value
+system_base_mva,100.0
+base_frequency_hz,60.0
+simulation_final_time_s,6.0
+frequency_lower_hz,-0.08
+frequency_upper_hz,0.08
+cbf_alpha,2.0
+filter_epsilon_s,0.02
+rocof_tau_s,0.02
+prox_step_fraction,0.8
+total_load_step_mw,400.0
+line_resistance_floor_enabled,1.0
+line_r_min_pu,0.002
+line_xr_cap,6.0
+background_load_constant_power,1.0

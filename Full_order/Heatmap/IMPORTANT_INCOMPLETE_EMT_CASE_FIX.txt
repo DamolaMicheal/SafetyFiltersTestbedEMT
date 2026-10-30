@@ -1,0 +1,30 @@
+Why epsilon=0.001 stopped at t=0.34 s
+
+This is not just a plotting-grid mismatch. The saved EMT case itself is
+incomplete: epsilon=0.001 s only contains data through about 0.34 s, while the
+heatmap requires 1.5 s.
+
+Therefore Python must NOT extend that trace to 1.5 s by extrapolation.
+
+The updated ieee39_main_run.jl uses an epsilon-aware IDA maximum step:
+  attempt 1: dtmax <= epsilon/5
+  attempt 2: dtmax <= epsilon/10
+  attempt 3: dtmax <= epsilon/20
+
+The same nominal solver tolerances are retained. Each attempt is run on a fresh
+EMT system. After execute!, the code checks the actual recovered signal end time.
+A partial case is rejected and automatically retried.
+
+For epsilon=0.001 s the attempted dtmax values are:
+  0.0002 s
+  0.0001 s
+  0.00005 s
+
+What you need to do:
+1. Replace ieee39_main_run.jl with the updated file in this package.
+2. Keep the other synchronized EMT files from the package.
+3. Rerun the Julia epsilon sweep.
+4. Then run plot_emt_epsilon_heatmap.py.
+
+The old CSV cannot support a scientifically valid 1.5-s heatmap for epsilon=0.001
+because its underlying EMT trajectory genuinely ends at 0.34 s.

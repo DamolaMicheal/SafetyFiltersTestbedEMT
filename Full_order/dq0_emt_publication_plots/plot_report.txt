@@ -1,0 +1,14 @@
+Julia dq0-EMT publication plots
+Safety CSV root: C:\Users\ajeye\OneDrive\Desktop\CBF_SafetyFilters_Project\Full_Order\plots\python_style_cbf\csv
+Filter OFF available: True
+Filter ON available: True
+
+Generated:
+  emt_frequency_safety_off_on.pdf
+  emt_frequency_safety_off_on.png
+  emt_barrier_safety_off_on.pdf
+  emt_barrier_safety_off_on.png
+  emt_local_filter_action.pdf
+  emt_local_filter_action.png
+  emt_gfl_power_decomposition.pdf
+  emt_gfl_power_decomposition.png

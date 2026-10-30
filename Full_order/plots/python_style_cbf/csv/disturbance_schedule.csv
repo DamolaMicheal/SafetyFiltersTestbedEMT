@@ -1,0 +1,4 @@
+bus,event_time_s,delta_p_mw,delta_q_mvar,delta_p_system_pu,delta_q_system_pu,background_load_model,disturbance_load_model
+35,0.25,300.0,0.0,3.0,0.0,FixedAdmittance,constant-PQ PerturbLoad (Q may be zero)
+2,0.25,150.0,0.0,1.5,0.0,FixedAdmittance,constant-PQ PerturbLoad (Q may be zero)
+29,0.25,75.0,0.0,0.75,0.0,FixedAdmittance,constant-PQ PerturbLoad (Q may be zero)
